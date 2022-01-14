@@ -85,6 +85,20 @@ eksctl create cluster -f eksctl-config.yaml
 ```
 kubectl expose deployment llk-nginx-deployment --port=80 --target-port=80 --name=nginx-prox-lb --type=LoadBalancer
 ```
+### headless service 
+
+```
+kubectl expose deployment first-deploy --port=80 --target-port=80 --name=first-svc-headless --cluster-ip='None'
+```
+use 
+```
+kubectl exec -it <pod-name> -- bash 
+```
+and run insode the pod
+```
+apt update; apt install dnsutils -y
+host first-svc-headless
+```
 
 ### For multi-port Load balancer service
 Look into nginx-svc-lb.yaml for all the changes made
