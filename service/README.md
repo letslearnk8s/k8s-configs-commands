@@ -86,3 +86,11 @@ eksctl create cluster -f eksctl-config.yaml
 kubectl expose deployment llk-nginx-deployment --port=80 --target-port=80 --name=nginx-prox-lb --type=LoadBalancer
 ```
 
+### For multi-port Load balancer service
+Look into nginx-svc-lb.yaml for all the changes made
+
+### Custom endpoint for svc
+Create service using
+```
+kubectl apply -f mysql-svc-external-endpoint.yaml
+```
