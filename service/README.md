@@ -1,5 +1,10 @@
 # All commands used in the video
 
+### Minikube start
+```
+minikube start --kubernetes-version=v1.23.1
+```
+
 ### Create deployment first-deploy
 ```bash
 kubectl create deployment first-deploy --image=nginx -r=3
