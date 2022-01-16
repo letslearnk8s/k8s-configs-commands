@@ -99,7 +99,7 @@ use
 ```
 kubectl exec -it <pod-name> -- bash 
 ```
-and run insode the pod
+and run inside the pod
 ```
 apt update; apt install dnsutils -y
 host first-svc-headless
