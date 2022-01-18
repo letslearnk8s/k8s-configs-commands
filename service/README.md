@@ -17,6 +17,13 @@ kubectl expose deployment/first-deploy --port=80 --target-port=80
 
 ## Tierd app, nginx and nodejs app
 
+### Git clone repo (If you do not have git installed, follow instructions from https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+```
+git clone https://github.com/letslearnk8s/k8s-configs-commands.git
+cd k8s-configs-commands/service
+```
+
 ### Creating nodejs app deployment
 ```bash
 kubectl create deployment second-deploy --image=letslearnkubernetes/nodejs-helloworld-hostname:2022011001 -r=3
