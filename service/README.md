@@ -1,6 +1,6 @@
 # All commands used in the video
 
-### Minikube start
+### Minikube start (Not required if you are going to use Docker Desktop or other alternative)
 ```
 minikube start --kubernetes-version=v1.23.1
 ```
