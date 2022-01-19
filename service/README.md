@@ -86,9 +86,9 @@ Once you have ipaddress and node port, use curl
 curl <IP ADDRESS>:<Node Port>
 ```
 
-#### Create eksctl cluster (To create NodeBalancer type service, LoadBalancer type needs CCM or custom controller)
+#### Create EKS cluster (To create NodeBalancer type service, LoadBalancer type needs Cloud or custom controller installed for Load balancer product)
 
-#### * This steps with aws cli configured (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) and eksctl installed (https://eksctl.io/introduction/#installation)
+#### Ensure aws cli is configured (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) and eksctl installed (https://eksctl.io/introduction/#installation)
 
 ```
 eksctl create cluster -f eksctl-config.yaml
