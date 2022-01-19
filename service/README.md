@@ -48,7 +48,7 @@ kubectl apply -f nginx-configmap.yaml
 kubectl apply -f nginx-deployment.yaml
 ```
 
-### Check ig nginx is working
+### Check if nginx deployment is working
 
 ```bash
 kubectl port-forward deployment/llk-nginx-deployment 8888:80
@@ -86,7 +86,9 @@ Once you have ipaddress and node port, use curl
 curl <IP ADDRESS>:<Node Port>
 ```
 
-### Create eksctl cluster
+### Create eksctl cluster (To create NodeBalancer type service, LoadBalancer type needs CCM or custom controller)
+
+### * This steps with aws cli configured (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) and eksctl installed (https://eksctl.io/introduction/#installation)
 
 ```
 eksctl create cluster -f eksctl-config.yaml
